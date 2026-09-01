@@ -140,15 +140,6 @@ SILO-RFIC-CAD/
 
 Each `DE`, `GA`, or `HYB` directory contains an optimizer-specific PDF report, `setup.txt`, and a `raw_data/` directory.
 
-## 🔐 Reproducibility and responsible reuse
-
-- Original research datasets are retained without numerical rewriting.
-- The validation script checks the expected structure, CSV row consistency, and Monte Carlo sample counts.
-- The directory name `HYB` is used consistently for the Hybrid optimizer.
-- Derived figures or tables should identify the source files and record the repository commit used.
-- Proprietary foundry files, PDK models, simulator installation data, and credentials must not be redistributed.
-- The interpretation boundary and rerun requirements are detailed in [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
-
 ## 📚 How to cite
 
 If you use the SILO datasets, reports, or helper scripts in academic work, please cite the accompanying paper and this research artifact.
