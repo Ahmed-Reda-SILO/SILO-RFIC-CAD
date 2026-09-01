@@ -112,27 +112,6 @@ Circuit-specific exports additionally provide oscillator transient waveforms and
 | Supply points | 1.62, 1.80, 1.98 V | 0-V external DC supply |
 | Monte Carlo samples | 1,000 per optimizer | 1,000 per optimizer |
 
-## 🚀 Quick start
-
-### Browse the research artifact
-
-Start with the [**Overall Performance Summary**](SILO_Overall_Performance_Summary.pdf), then open the relevant case-study and optimizer directory for its report, setup, and raw data.
-
-### Clone and validate
-
-```bash
-git clone https://github.com/Ahmed-Reda-SILO/SILO-RFIC-CAD.git
-cd SILO-RFIC-CAD
-python scripts/validate_repository.py
-```
-
-### Summarize the selected designs
-
-```bash
-python scripts/summarize_best_solutions.py
-```
-
-The helper scripts use only the Python standard library. The CSV files can also be analyzed directly using MATLAB, Python/pandas, R, or spreadsheet software.
 
 ## 📁 Repository structure
 
