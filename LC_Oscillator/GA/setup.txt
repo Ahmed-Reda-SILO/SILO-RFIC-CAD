@@ -1,0 +1,160 @@
+; ============================================================
+; GA LC Oscillator Optimization - Setup Parameters
+; ============================================================
+
+; ------------------------------------------------------------
+; Design variable names in the schematic / netlist
+; ------------------------------------------------------------
+L5_var_name      = "L5"
+NF5_var_name     = "NF5"
+NM5_var_name     = "NM5"
+W5_var_name      = "W5"
+LCAP_var_name    = "LCAP"
+NMCAP_var_name   = "NMCAP"
+WCAp_var_name    = "WCAp"
+IRL_var_name     = "IRL"
+NML_var_name     = "NML"
+NTL_var_name     = "NTL"
+L34_var_name     = "L34"
+W34_var_name     = "W34"
+NM34_var_name    = "NM34"
+NF34_var_name    = "NF34"
+VB_var_name      = "VB"
+L12_var_name     = "L12"
+NF12_var_name    = "NF12"
+NM12_var_name    = "NM12"
+W12_var_name     = "W12"
+
+; ------------------------------------------------------------
+; ------------------------------------------------------------
+ISSval           = 1m
+VDDval           = 1.8
+Foval            = 5G
+DelFval          = 1000K
+TempVal          = 27.0
+
+; ------------------------------------------------------------
+; ------------------------------------------------------------
+FOMCostOffsetHz  = 1e6
+FOMLogOffset1Hz  = 1e5
+FOMLogOffset2Hz  = 1e6
+
+; ------------------------------------------------------------
+; Sanity thresholds / penalties
+; ------------------------------------------------------------
+MinOscFreqHz     = 1e6
+MinPD_W          = 1e-12
+PenaltyCost      = 1e12
+acceptTol        = -1e9
+stopCostThresh   = acceptTol
+
+; ------------------------------------------------------------
+; ------------------------------------------------------------
+; Default frequency target is centered around Fo. Adjust as needed.
+FoscTargetMin    = 0.98 * Foval
+FoscTargetMax    = 1.02 * Foval
+
+; Power dissipation target window (W)
+PDTargetMin      = 1e-6
+PDTargetMax      = 10e-3
+
+; Fundamental differential peak target window (V)
+V1pkTargetMin    = 0.5
+V1pkTargetMax    = 1.5
+
+; Phase-noise target window at 1 MHz offset (dBc/Hz)
+PN1MTargetMin    = -200
+PN1MTargetMax    = -100
+
+; Weights of each penalty term
+wFosc            = 1.0
+wPD              = 1.0
+wV1pk            = 1.0
+wPN1M            = 1.0
+
+; ------------------------------------------------------------
+; Geometry / device bounds for DE search
+; ------------------------------------------------------------
+L5min            = 180e-9
+L5max            = 500e-9
+NF5min           = 1
+NF5max           = 5
+NM5min           = 5
+NM5max           = 10
+W5min            = 5e-6
+W5max            = 10e-6
+
+LCAPmin          = 5e-6
+LCAPmax          = 10e-6
+NMCAPmin         = 1
+NMCAPmax         = 10
+WCApmin          = 5e-6
+WCApmax          = 10e-6
+
+IRLmin           = 30e-6
+IRLmax           = 50e-6
+NMLmin           = 1
+NMLmax           = 1
+NTLmin           = 1
+NTLmax           = 10
+
+L34min           = 180e-9
+L34max           = 500e-9
+W34min           = 5e-6
+W34max           = 10e-6
+NM34min          = 5
+NM34max          = 10
+NF34min          = 1
+NF34max          = 5
+
+VBmin            = 0.75
+VBmax            = 1.2
+
+L12min           = 180e-9
+L12max           = 500e-9
+NF12min          = 1
+NF12max          = 5
+NM12min          = 5
+NM12max          = 10
+W12min           = 5e-6
+W12max           = 10e-6
+
+; ============================================================
+; Genetic Algorithm (GA) knobs
+; ============================================================
+
+; Population and generations
+popSize         = 50           ; number of individuals in population 50
+maxGen          = 30           ; maximum generations 30
+
+; GA crossover and mutation parameters
+pcross          = 0.9          ; crossover probability
+pmut            = 0.2          ; per-gene mutation probability
+
+stallGenLimit    = 10         ; Early stopping parameters
+
+; ================================
+; PVT sweep lists
+; ================================
+;procList = list("tt" "ss" "ff" "sf" "fs")
+;vddList  = list(1.62 1.8 1.98)
+;tmpList  = list(-40 0.0 27.0 70.0 85)
+
+procList = list("tt" "ss" "ff" "sf" "fs")
+vddList  = list(1.62 1.8 1.98)
+tmpList  = list(-40 0.0 27.0 70.0 85)
+
+
+
+; ============================================================
+; Monte Carlo knobs
+; ============================================================
+mcMethod        = "all"
+mcNumPoints     = "1000"
+mcSamplingMode  = "random"
+mcDoNominal     = "1"
+mcSaveProcess   = "1"
+mcSaveMismatch  = "1"
+mcDumpParamMode = "yes"
+
+; ============================================================

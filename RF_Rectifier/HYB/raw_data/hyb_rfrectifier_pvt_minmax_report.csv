@@ -1,0 +1,69 @@
+metric_key,metric_label,extreme_type,value,promos,TEMP,VDD
+Area,Area (um^2),MIN,634.033,tt,-40,0
+Area,Area (um^2),MIN,634.033,tt,0,0
+Area,Area (um^2),MIN,634.033,tt,27,0
+Area,Area (um^2),MIN,634.033,tt,70,0
+Area,Area (um^2),MIN,634.033,tt,85,0
+Area,Area (um^2),MIN,634.033,ss,-40,0
+Area,Area (um^2),MIN,634.033,ss,0,0
+Area,Area (um^2),MIN,634.033,ss,27,0
+Area,Area (um^2),MIN,634.033,ss,70,0
+Area,Area (um^2),MIN,634.033,ss,85,0
+Area,Area (um^2),MIN,634.033,ff,-40,0
+Area,Area (um^2),MIN,634.033,ff,0,0
+Area,Area (um^2),MIN,634.033,ff,27,0
+Area,Area (um^2),MIN,634.033,ff,70,0
+Area,Area (um^2),MIN,634.033,ff,85,0
+Area,Area (um^2),MIN,634.033,sf,-40,0
+Area,Area (um^2),MIN,634.033,sf,0,0
+Area,Area (um^2),MIN,634.033,sf,27,0
+Area,Area (um^2),MIN,634.033,sf,70,0
+Area,Area (um^2),MIN,634.033,sf,85,0
+Area,Area (um^2),MIN,634.033,fs,-40,0
+Area,Area (um^2),MIN,634.033,fs,0,0
+Area,Area (um^2),MIN,634.033,fs,27,0
+Area,Area (um^2),MIN,634.033,fs,70,0
+Area,Area (um^2),MIN,634.033,fs,85,0
+Area,Area (um^2),MAX,634.033,tt,-40,0
+Area,Area (um^2),MAX,634.033,tt,0,0
+Area,Area (um^2),MAX,634.033,tt,27,0
+Area,Area (um^2),MAX,634.033,tt,70,0
+Area,Area (um^2),MAX,634.033,tt,85,0
+Area,Area (um^2),MAX,634.033,ss,-40,0
+Area,Area (um^2),MAX,634.033,ss,0,0
+Area,Area (um^2),MAX,634.033,ss,27,0
+Area,Area (um^2),MAX,634.033,ss,70,0
+Area,Area (um^2),MAX,634.033,ss,85,0
+Area,Area (um^2),MAX,634.033,ff,-40,0
+Area,Area (um^2),MAX,634.033,ff,0,0
+Area,Area (um^2),MAX,634.033,ff,27,0
+Area,Area (um^2),MAX,634.033,ff,70,0
+Area,Area (um^2),MAX,634.033,ff,85,0
+Area,Area (um^2),MAX,634.033,sf,-40,0
+Area,Area (um^2),MAX,634.033,sf,0,0
+Area,Area (um^2),MAX,634.033,sf,27,0
+Area,Area (um^2),MAX,634.033,sf,70,0
+Area,Area (um^2),MAX,634.033,sf,85,0
+Area,Area (um^2),MAX,634.033,fs,-40,0
+Area,Area (um^2),MAX,634.033,fs,0,0
+Area,Area (um^2),MAX,634.033,fs,27,0
+Area,Area (um^2),MAX,634.033,fs,70,0
+Area,Area (um^2),MAX,634.033,fs,85,0
+VOUTMAX,VOUTMAX (V),MIN,0.488344,sf,85,0
+VOUTMAX,VOUTMAX (V),MAX,0.547973,fs,-40,0
+POUT_AVG,POUT_AVG (uW),MIN,1.04118,sf,85,0
+POUT_AVG,POUT_AVG (uW),MAX,1.31662,ff,-40,0
+PIN_AVG,PIN_AVG (uW),MIN,1.2601,ss,0,0
+PIN_AVG,PIN_AVG (uW),MAX,1.49583,ff,27,0
+PCE,PCE (%),MIN,74.5657,ff,70,0
+PCE,PCE (%),MAX,98.0367,fs,-40,0
+PIDBM,PIDBM (dBm),MIN,-28.996,ss,0,0
+PIDBM,PIDBM (dBm),MAX,-28.2512,ff,27,0
+DELTAVO,DELTAVO (mV),MIN,4.33197,tt,-40,0
+DELTAVO,DELTAVO (mV),MAX,8.80997,ff,85,0
+FOM1,FOM1,MIN,532.312,sf,70,0
+FOM1,FOM1,MAX,766.327,fs,-40,0
+FOM2,FOM2,MIN,15146.9,ff,70,0
+FOM2,FOM2,MAX,22015.3,fs,-40,0
+FOM3,FOM3,MIN,30050.1,ff,70,0
+FOM3,FOM3,MAX,40175.8,fs,-40,0

@@ -1,0 +1,17 @@
+metric_key,metric_label,extreme_type,value,process,TEMP,VDD
+Fosc_GHz,Fosc (GHz),MIN,4.962056,ff,-40,1.98
+Fosc_GHz,Fosc (GHz),MAX,5.176002,ss,85,1.62
+PD_mW,PD (mW),MIN,1.63548,ss,-40,1.62
+PD_mW,PD (mW),MAX,7.711716,ff,-40,1.98
+V1pk_V,V1pk (V),MIN,1.05783,ss,85,1.62
+V1pk_V,V1pk (V),MAX,1.925874,ff,-40,1.98
+V1rms_V,V1rms (V),MIN,0.5289149,ss,85,1.62
+V1rms_V,V1rms (V),MAX,0.9629368,ff,-40,1.98
+PN_100k_dBc,PN @100k (dBc/Hz),MIN,-94.24028,sf,-40,1.98
+PN_100k_dBc,PN @100k (dBc/Hz),MAX,-88.4651,fs,85,1.62
+PN_1M_dBc,PN @1M (dBc/Hz),MIN,-119.1978,ff,-40,1.98
+PN_1M_dBc,PN @1M (dBc/Hz),MAX,-113.195,ss,85,1.62
+FOM_100k,FOM @100k,MIN,-183.7125,ss,-40,1.62
+FOM_100k,FOM @100k,MAX,-176.267,ff,85,1.98
+FOM_1M,FOM @1M,MIN,-188.7008,ss,-40,1.62
+FOM_1M,FOM @1M,MAX,-181.6575,ff,85,1.98

@@ -1,0 +1,141 @@
+; ============================================================
+; Hyprid GA+DE RF Rectifier Optimization - Setup Parameters
+; ============================================================
+
+; ------------------------------------------------------------
+; Design variable names in the schematic / netlist
+; ------------------------------------------------------------
+WN_var_name     = "WN"
+LN_var_name     = "LN"
+WP_var_name     = "WP"
+LP_var_name     = "LP"
+MC_var_name     = "MC"
+CF_var_name     = "CF"
+RL_var_name     = "RL"
+
+NFN_var_name    = "NFN"
+NFP_var_name    = "NFP"
+AMPRF_var_name  = "AMPRF"
+FREQ_var_name   = "FREQ"
+
+; ------------------------------------------------------------
+; Fixed testbench / PVT values
+; ------------------------------------------------------------
+NFNval          = 1
+NFPval          = 1
+AMPRFval        = 500m
+FREQval         = 920.0M
+VDDdummy        = 0.0
+tempVal         = 27.0
+procCorner      = "tt"
+
+; ------------------------------------------------------------
+; Spec targets used in the cost function
+; ------------------------------------------------------------
+VOUTTargetMin       = 0.5        ; minimum acceptable peak output voltage (V)
+VOUTTargetMax       = 1.0        ; soft upper window for peak output voltage (V)
+
+PCETargetMin        = 85.0       ; minimum acceptable PCE (%)
+PCETargetMax        = 95.0      ; physical upper limit (%)
+
+POUTTargetMin       = 1e-6       ; minimum acceptable average output power (W)
+POUTTargetMax       = 1e-3       ; soft upper window for average output power (W)
+
+DeltaVoTargetMin    = 0.0        ; ripple lower bound (V)
+DeltaVoTargetMax    = 10e-3      ; maximum acceptable ripple (V)
+
+PinTargetMin_dBm    = -35.0      ; very low input power floor for sanity
+PinTargetMax_dBm    = -15.0        ; keep required RF input power reasonably low
+
+; ------------------------------------------------------------
+; Geometry / component bounds for DE search
+; ------------------------------------------------------------
+WNmin           = 0.5e-6
+WNmax           = 20e-6
+
+LNmin           = 180e-9
+LNmax           = 1e-6
+
+WPmin           = 0.5e-6
+WPmax           = 20e-6
+
+LPmin           = 180e-9
+LPmax           = 1e-6
+
+MCmin           = 2
+MCmax           = 10
+
+CFmin           = 1
+CFmax           = 5
+
+RLmin           = 10e3
+RLmax           = 500e3
+
+; ------------------------------------------------------------
+; Area constraint scaling
+; Area = (((MC + 2*CF)*1e-10) + 2*LN*WN + 2*LP*WP)
+; ------------------------------------------------------------
+AreaMinFactor   = 1.0
+AreaMaxFactor   = 100.0
+
+; ------------------------------------------------------------
+; Cost function tolerance
+; ------------------------------------------------------------
+acceptTol       = 1e-12
+
+; ============================================================
+; Hyprid GA+DE algorithm knobs
+; Fixed-budget split: GA exploration + DE refinement
+; ============================================================
+popSize         = 50 		; 50
+
+gaMaxGen        = 15 		; 15
+pcross          = 0.9
+pmut            = 0.2
+
+deMaxGen        = 15    	; 15
+Fscale          = 0.7
+CR              = 0.8
+
+stallGenLimit   = 10
+stopCostThresh  = acceptTol
+
+; ============================================================
+; ============================================================
+; ================================
+; PVT sweep lists
+; ================================
+procList = list("tt" "ss" "ff" "sf" "fs")
+vddList  = list(0.0)
+tmpList  = list(-40 0.0 27.0 70.0 85)
+; ============================================================
+; Monte Carlo knobs
+; ============================================================
+mcMethod        = "all"
+mcNumPoints     = "1000"
+mcSamplingMode  = "random"
+mcDoNominal     = "1"
+mcSaveProcess   = "1"
+mcSaveMismatch  = "1"
+mcDumpParamMode = "yes"
+
+; ============================================================
+; ============================================================
+; ============================================================
+; ============================================================
+
+; -----------------------------------------------------------------------------
+; Package / interconnect parameters
+; -----------------------------------------------------------------------------
+CPADval   = 0.25p
+RBONDval  = 0.3
+CPINval   = 2p
+LBONDval  = 2n
+RTRACEval = 500m
+
+
+
+; Recommended SP sweep limits for impedance/S11 extraction
+XRAY_SP_START  = "0.85G"
+XRAY_SP_STOP   = "0.95G"
+XRAY_SP_POINTS = 101
